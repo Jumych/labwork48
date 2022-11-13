@@ -1,0 +1,82 @@
+[
+{
+  "model": "webapp.product",
+  "pk": 1,
+  "fields": {
+    "name": "Велосипед",
+    "description": "Горный, для Соревнования",
+    "category": "other",
+    "remainder": 3,
+    "price": 25000
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 2,
+  "fields": {
+    "name": "Телефон",
+    "description": "Для связи, для учебы, для работы",
+    "category": "unique",
+    "remainder": 2,
+    "price": 10000
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 3,
+  "fields": {
+    "name": "Компьютер",
+    "description": "Мощный компьютер, Процессор:Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz   2.60 GHz",
+    "category": "priority",
+    "remainder": 2,
+    "price": 50000
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 4,
+  "fields": {
+    "name": "Книга",
+    "description": "История Мира, Войны, Империя",
+    "category": "basic",
+    "remainder": 4,
+    "price": 5000
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$8QShYjvCMiPbhdYK66cvgQ$BNnt0D4Wv8c1UMTYX7jqTNNNIQgvRN3vu7Sef1NDDvA=",
+    "last_login": "2022-11-13T17:09:34.173Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-11-13T16:51:49.872Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$aC3QwcX7IdqeOO4BDwVIb3$t7E0It24pqt1Kr97DUME02+UmkZg7DQtIym06nU614s=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "user",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-11-13T16:56:20.279Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
