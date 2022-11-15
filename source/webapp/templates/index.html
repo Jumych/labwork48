@@ -4,6 +4,7 @@
     <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="{% url 'product/add' %}">Add</a>
     </li>
+
     {% endblock %}
 
     {% block content %}
@@ -12,7 +13,7 @@
     {% for eshop in eshop %}
         <div class="col">
         <div class="card">
-  <h5 class="card-header">Название: <a href="{% url 'eshop/view' eshop.pk %}">{{ eshop.name }}</a></h5>
+  <h5 class="card-header">Название: <a href="{% url 'eshop/view' eshop.pk %}">{{ eshop.name }} <a href="{% url "product_update" eshop.pk %}"><i class="bi bi-pen"></i></a></a></h5>
   <div class="card-body">
     <h5 class="card-title">Цена:{{ eshop.price }}</h5>
     <p class="card-text">Категория:{{ eshop.category }}</p>

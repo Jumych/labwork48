@@ -29,3 +29,36 @@ def add_product(request):
             return redirect('index')
         else:
             return render(request, 'add_product.html', {'form', form})
+
+def update_product(request, pk):
+    eshop = get_object_or_404(Product, pk=pk)
+    if request.method == "GET":
+        form = ProductForm(initial={
+            'name': eshop.name,
+            'description': eshop.description,
+            'category': eshop.category,
+            'remainder': eshop.remainder,
+            'price': eshop.price
+        })
+        return render(request, "update_product.html", {'form': form})
+    elif request.method == 'POST':
+        form = ProductForm(data=request.POST)
+        if form.is_valid():
+            eshop.name = form.cleaned_data.get('name')
+            eshop.description = form.cleaned_data.get('description')
+            eshop.category = form.cleaned_data.get('category')
+            eshop.remainder = form.cleaned_data.get('remainder')
+            eshop.price = form.cleaned_data.get('price')
+            eshop.save()
+            return redirect('index')
+        else:
+            return render(request, "update_product.html", {'form': form})
+
+    def delete_product(re)
+
+
+
+
+
+
+
