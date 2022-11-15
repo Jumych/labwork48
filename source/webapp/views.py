@@ -54,7 +54,13 @@ def update_product(request, pk):
         else:
             return render(request, "update_product.html", {'form': form})
 
-    def delete_product(re)
+def product_delete(request, pk):
+    eshop = get_object_or_404(Product, pk=pk)
+    if request.method == 'GET':
+        return render(request, 'delete_product.html', context={'eshop': eshop})
+    elif request.method == 'POST':
+        eshop.delete()
+        return redirect('index')
 
 
 

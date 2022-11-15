@@ -13,7 +13,8 @@
     {% for eshop in eshop %}
         <div class="col">
         <div class="card">
-  <h5 class="card-header">Название: <a href="{% url 'eshop/view' eshop.pk %}">{{ eshop.name }} <a href="{% url "product_update" eshop.pk %}"><i class="bi bi-pen"></i></a></a></h5>
+  <h5 class="card-header">Название: <a href="{% url 'eshop/view' eshop.pk %}">{{ eshop.name }} <a href="{% url "product/update" eshop.pk %}"><i class="bi bi-pen"></i></a></a><a
+          href="{% url "product/delete" eshop.pk %}"><i class="bi bi-file-earmark-x"></i></a></h5>
   <div class="card-body">
     <h5 class="card-title">Цена:{{ eshop.price }}</h5>
     <p class="card-text">Категория:{{ eshop.category }}</p>
