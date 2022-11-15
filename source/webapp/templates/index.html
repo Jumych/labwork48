@@ -1,12 +1,18 @@
 {% extends "base.html" %}
 
+ {% block nav %}
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{% url 'product/add' %}">Add</a>
+    </li>
+    {% endblock %}
+
     {% block content %}
     <h1>Electro Store</h1>
 <div class="row rows-3">
     {% for eshop in eshop %}
         <div class="col">
         <div class="card">
-  <h5 class="card-header">Название: <a href="{% url 'eshop_view' eshop.pk %}">{{ eshop.name }}</a></h5>
+  <h5 class="card-header">Название: <a href="{% url 'eshop/view' eshop.pk %}">{{ eshop.name }}</a></h5>
   <div class="card-body">
     <h5 class="card-title">Цена:{{ eshop.price }}</h5>
     <p class="card-text">Категория:{{ eshop.category }}</p>

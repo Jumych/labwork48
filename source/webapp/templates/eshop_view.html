@@ -2,13 +2,28 @@
 
 
 {% block content%}
+    {% csrf_token %}
     <div class="card text-center">
   <div class="card-header">
     Название: {{ eshop.name }}
   </div>
   <div class="card-body">
     <h5 class="card-title">Описание: {{ eshop.description }}</h5>
-    <p class="card-text" style="white-space: pre-wrap">{{ eshop.description }}</p>
+<p class="card-text" style="white-space: pre-wrap">{{ eshop.description }}</p>
+  </div>
+    <div class="card-body">
+    <h5 class="card-title">Категория: {{ eshop.category }}</h5>
+    <p class="card-text" style="white-space: pre-wrap">{{ eshop.category }}</p>
+
+  </div>
+    <div class="card-body">
+    <h5 class="card-title">Остаток: {{ eshop.remainder }}</h5>
+    <p class="card-text" style="white-space: pre-wrap">{{ eshop.remainder }}</p>
+
+  </div>
+    <div class="card-body">
+    <h5 class="card-title">Цена: {{ eshop.price }}</h5>
+    <p class="card-text" style="white-space: pre-wrap">{{ eshop.price }}</p>
 
   </div>
 </div>
